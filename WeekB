@@ -1,0 +1,32 @@
+package com.example.fn2;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class Week5B extends AppCompatActivity {
+
+    //step 1
+    TextView my5R5B;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_week5_b);
+
+        //step 2
+        my5R5B = findViewById(R.id.Res5B);
+
+        //step 3 - 4
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("my_name");
+
+        String num = intent.getStringExtra("my_num");
+        my5R5B.setText("Hi ,"+ name + "Your Grade is" + num);
+
+    }
+}
